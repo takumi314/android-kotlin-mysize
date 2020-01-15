@@ -46,19 +46,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/sieeve"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="裄丈"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="@+id/droidImage"
-        app:layout_constraintStart_toEndOf="@+id/droidImage"
-        app:layout_constraintTop_toTopOf="@+id/droidImage" />
-
-    <EditText
         android:id="@+id/inseam"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
@@ -90,4 +77,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_height" />
+
+    <EditText
+        android:id="@+id/sleeve"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="裄丈"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/droidImage"
+        app:layout_constraintStart_toEndOf="@+id/droidImage"
+        app:layout_constraintTop_toTopOf="@+id/droidImage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
