@@ -1,5 +1,6 @@
 package com.example.mysize
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         // 保存ボタンタップ時の処理を登録する
         save.setOnClickListener { this.onSaveTapped() }
+
+        // 画面遷移
+        heightButton.setOnClickListener { this.onStartHeightActvity() }
     }
 
     private fun onSaveTapped() {
@@ -37,6 +41,11 @@ class MainActivity : AppCompatActivity() {
             putString("WAIST", waist.text.toString())
             putString("INSEAM", inseam.text.toString())
         }
+    }
+
+    private fun onStartHeightActvity() {
+        val intent = Intent(this, HeightActvity::class.java)
+        startActivity(intent)
     }
 
 }
