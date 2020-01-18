@@ -3,6 +3,7 @@ package com.example.mysize
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
+import android.widget.RadioButton
 import android.widget.SeekBar
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
@@ -69,6 +70,13 @@ class HeightActvity : AppCompatActivity() {
                 override
                 fun onStopTrackingTouch(seekBar: SeekBar?) { }
             })
+
+        // ラジオボタンの選択状態が変更がされた時に呼ばれるリスナーを登録します
+        radioGroup.setOnCheckedChangeListener {
+            group, checkedId ->
+                // 選択されたラジオボタンのIDを取得し、ビューにセットする
+                height.text = findViewById<RadioButton>(checkedId).text
+        }
     }
 
     // アクティビティが非表示なる時にコールされる
